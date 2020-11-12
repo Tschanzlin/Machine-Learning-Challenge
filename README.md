@@ -7,8 +7,14 @@
 -- Support Vector Machine
 -- Neural Netwok
 
+## Linear Regression Results and Model Adjustments:
+- Initial x values limited to the four koi flags; 43% training score
+- 
+
+
+
 ## Data Review and Cleaning
-- After reviewing the data, potential planets were classified as Candidate, False Positive, or Confirmed.  For this analysis, I am splitting the dataset into a "Candidate" data set and an "Identified" dataset.  Identified will include the Confirmed and False Positive planets.  I'll model and fit on the "Identified" dataset to create a model which will determine whether a planet was Confirmed or False Positive.  I'll then run on the "Candidate" dataset to classify those planets.
+- Potential planets identified by Kepler have been classified as Candidate, False Positive, or Confirmed.  For this analysis, I am splitting the dataset into a "Candidate" data set and an "Identified" dataset.  Identified will include the Confirmed and False Positive planets.  I'll model and fit on the "Identified" dataset to create a model which will determine whether a planet was Confirmed or False Positive.  I'll then run on the "Candidate" dataset to classify those planets.
 - After reviewing the column definitions, I decided to remove the error measurements from each datafield and just go with the actual measurements themselves.  There are 40 total data columns, excluding the planet classification.   By eliminating the error data, the total columns are reduced by half to 20 column, which would seem to be more manageable for the initial data modeling and training.
 
 
