@@ -1,11 +1,11 @@
 # Machine-Learning-Challenge
-- For this challenge, I'm going to try to use five models to predict whether an unclassified planet ("Candidate") is likley to be classified as "Confirmed" or "False Positive".
-- Potential models include:
+- For this challenge, I'm going to try to use three models to predict whether an unclassified planet ("Candidate") is likley to be classified as "Confirmed" or "False Positive".  With more time, I would explore the neural network modeling.  I tried using the SVM model, but was not able to get it to work with the data.
+- Models include:
 -- Linear Regression
 -- Logistic Regression
 -- KNN
--- Support Vector Machine
 
+- I found the Logistics Regression Model to be reasonably accurate at 82% and a decent predictor of a planet.  This could model could be used with other tools to improve its accuracy.  
 
 ## Data Review and Cleaning
 - Potential planets identified by Kepler have been classified as Candidate, False Positive, or Confirmed.  For this analysis, I am splitting the dataset into a "Candidate" data set and an "Identified" dataset.  Identified will include the Confirmed and False Positive planets.  I'll model and fit on the "Identified" dataset to create a model which will determine whether a planet was Confirmed or False Positive.  Once models have been validated, they could then be run on the "Candidate" dataset to classify those planets.
@@ -15,8 +15,7 @@
 ## Model Training Results:
 - Linear Regresssion:  Best:  75.1% using all data columns; Worst:  5.5% using kic_params only
 - Logistics Regression:  Best:  82.0% using all data columns; Worst:  66.0% using kic_params only
-- KNN:  Model indicates 98% accuracy, but validation test would not accurately predict any planets
-- Support Vector Machine:
+- KNN:  Model indicates 98% accuracy, but validation test would not accurately predict any planets; thi smodel needs more work
 
 
 ## CSV File Column Labels and Definitions (note:  error columns are not referenced below)
