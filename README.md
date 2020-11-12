@@ -5,20 +5,18 @@
 -- Logistic Regression
 -- KNN
 -- Support Vector Machine
--- Neural Netwok
-- For all of the models, I dropped the "Candidate" planet under the assumption that the planet has neither been confirmed as a plant or classified as false positive. 
-- Additionally, for all models, I grouped the dropped the error columns from the dataset and focused only on the measured values.  I then grouped the measured values by their NASA classification schemes (see below), and then looped through the various alternatives to determine the best group of data
+
+
+## Data Review and Cleaning
+- Potential planets identified by Kepler have been classified as Candidate, False Positive, or Confirmed.  For this analysis, I am splitting the dataset into a "Candidate" data set and an "Identified" dataset.  Identified will include the Confirmed and False Positive planets.  I'll model and fit on the "Identified" dataset to create a model which will determine whether a planet was Confirmed or False Positive.  Once models have been validated, they could then be run on the "Candidate" dataset to classify those planets.
+- After reviewing the column definitions, I decided to remove the error measurements from each datafield and just go with the actual measurements themselves.  There are 40 total data columns, excluding the planet classification.   By eliminating the error data, the total columns are reduced by half to 20 column, which would seem to be more manageable for the initial data modeling and training.
+
 
 ## Model Training Results:
 - Linear Regresssion:  Best:  75.1% using all data columns; Worst:  5.5% using kic_params only
-- Logistics Regression:  82.0% using all data columns; Worst:  66.0% using kic_params only
-- KNN:
+- Logistics Regression:  Best:  82.0% using all data columns; Worst:  66.0% using kic_params only
+- KNN:  Model indicates 98% accuracy, but validation test would not accurately predict any planets
 - Support Vector Machine:
-- Neural Network:
-
-## Data Review and Cleaning
-- Potential planets identified by Kepler have been classified as Candidate, False Positive, or Confirmed.  For this analysis, I am splitting the dataset into a "Candidate" data set and an "Identified" dataset.  Identified will include the Confirmed and False Positive planets.  I'll model and fit on the "Identified" dataset to create a model which will determine whether a planet was Confirmed or False Positive.  I'll then run on the "Candidate" dataset to classify those planets.
-- After reviewing the column definitions, I decided to remove the error measurements from each datafield and just go with the actual measurements themselves.  There are 40 total data columns, excluding the planet classification.   By eliminating the error data, the total columns are reduced by half to 20 column, which would seem to be more manageable for the initial data modeling and training.
 
 
 ## CSV File Column Labels and Definitions (note:  error columns are not referenced below)
