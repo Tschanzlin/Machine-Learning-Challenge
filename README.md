@@ -6,17 +6,15 @@
 -- KNN
 -- Support Vector Machine
 -- Neural Netwok
+- For all of the models, I dropped the "Candidate" planet under the assumption that the planet has neither been confirmed as a plant or classified as false positive. 
+- Additionally, for all models, I grouped the dropped the error columns from the dataset and focused only on the measured values.  I then grouped the measured values by their NASA classification schemes (see below), and then looped through the various alternatives to determine the best group of data
 
-## Linear Regression Results and Model Adjustments:
-- Initial x values limited to the four koi flags of Project Disposition Columns; 43% training score
-- Added seven columns from Transit properties; 44% training score
-- Dropped four koi flags; 11% training score
-- Added four koi flags back and added two Threshold Crossing columns; 45% training
-- Added three columns from Stellar parameters; 45% training score
-- Added KIC parameters; still at 45%
-
-- Created a new dataframe which dropped the "Candidate" planet disposition and increased training score to 74%
-
+## Model Training Results:
+- Linear Regresssion:  Best:  75.1% using all data columns; Worst:  5.5% using kic_params only
+- Logistics Regression:  82.0% using all data columns; Worst:  66.0% using kic_params only
+- KNN:
+- Support Vector Machine:
+- Neural Network:
 
 ## Data Review and Cleaning
 - Potential planets identified by Kepler have been classified as Candidate, False Positive, or Confirmed.  For this analysis, I am splitting the dataset into a "Candidate" data set and an "Identified" dataset.  Identified will include the Confirmed and False Positive planets.  I'll model and fit on the "Identified" dataset to create a model which will determine whether a planet was Confirmed or False Positive.  I'll then run on the "Candidate" dataset to classify those planets.
