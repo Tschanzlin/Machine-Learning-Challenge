@@ -61,19 +61,13 @@
 - koi_srad:  The photospheric radius of the star
 
 ## KIC Parameters:
-### Kepler Input Catalog (KIC) is a catalog containing photometric and physical data for sources in the Kepler mission field of view; it is used by the mission to select optimal targets.
+#### Kepler Input Catalog (KIC) is a catalog containing photometric and physical data for sources in the Kepler mission field of view; it is used by the mission to select optimal targets.
 
 - ra:  KIC Right Ascension
 
 - dec:  KIC Declination
 
 - koi_kepmag:  Kepler-band (mag)
-
-
-
-
-
-
 
 
 Data Source:  NASA Expolanet Archive
