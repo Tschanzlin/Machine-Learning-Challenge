@@ -8,9 +8,14 @@
 -- Neural Netwok
 
 ## Linear Regression Results and Model Adjustments:
-- Initial x values limited to the four koi flags; 43% training score
-- 
+- Initial x values limited to the four koi flags of Project Disposition Columns; 43% training score
+- Added seven columns from Transit properties; 44% training score
+- Dropped four koi flags; 11% training score
+- Added four koi flags back and added two Threshold Crossing columns; 45% training
+- Added three columns from Stellar parameters; 45% training score
+- Added KIC parameters; still at 45%
 
+- Created a new dataframe which dropped the "Candidate" planet disposition and increased training score to 74%
 
 
 ## Data Review and Cleaning
